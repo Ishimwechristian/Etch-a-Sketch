@@ -1,0 +1,31 @@
+/* Include padding and borders inside an element's width/height,
+   so they don't change the size of the squares */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+/* The container is the 960px sketch pad */
+#container {
+  display: flex;
+  flex-wrap: wrap;   /* Wrap squares onto new rows */
+  width: 960px;
+  height: 960px;
+}
+
+.square {
+  flex-shrink: 0;             /* Don't let squares get squished */
+  background-color: white;
+}
+
+/* Added by JavaScript when the mouse enters a square */
+.square.hovered {
+  background-color: black;
+}
